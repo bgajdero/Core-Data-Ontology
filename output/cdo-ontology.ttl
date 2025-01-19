@@ -10,8 +10,8 @@
         <https://eupl.eu/1.2> "https://eupl.eu/1.2/en/";
         <http://www.w3.org/ns/adms/relatedDocumentation> "Knowles, P., Gajderowicz, B., and Dugas, K., “Data-Centric Design: Introducing an Informatics Domain Model and Core Data Ontology for Computational Systems,” In Proceedings of the 10th International Conference on Data Mining & Knowledge Management (DaKM 2024)" ;
         <http://purl.org/vocab/vann/preferredNamespacePrefix> "cdo" ;
-        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://raw.githubusercontent.com/THCLab/ontology/refs/heads/main/output/cdo-ontology.ttl" ;
-        <http://purl.org/dc/elements/1.1/creator> "Paul Knowles (paul.knowles@humancolossus.org)" ,
+        <http://purl.org/vocab/vann/preferredNamespaceUri> "https://raw.githubusercontent.com/bgajdero/Core-Data-Ontology/refs/heads/main/output/cdo-ontology.ttl" ;
+        <http://purl.org/dc/elements/1.1/creator> "Paul Knowles (paul@secours.ai)" ,
                                                 "Bart Gajderowicz (bartg@mie.utoronto.ca)" ,
                                                 "Kieth Dugas (keith@secours.ai)" ;
         <http://purl.org/dc/elements/1.1/description> """Introducing an Informatics Domain Model and Core Data Ontology for Computational Systems.""" ;
