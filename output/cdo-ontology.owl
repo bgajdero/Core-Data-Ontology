@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="https://onto.colossi.network/cdo"
+         xmlns="https://onto.colossi.network/cdo#">
+
+<owl:Ontology rdf:about="https://onto.colossi.network/cdo"/>
+
+<owl:ObjectProperty rdf:about="#isDefinedBy">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Attribute"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasForm">
+  <rdfs:domain rdf:resource="#Attribute"/>
+  <rdfs:range rdf:resource="#Form"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isSystemic">
+  <rdfs:domain rdf:resource="#Form"/>
+  <rdfs:range rdf:resource="#Schema"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAttributes">
+  <rdfs:domain rdf:resource="#Schema"/>
+  <rdfs:range rdf:resource="#Attribute"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isTextual">
+  <rdfs:domain rdf:resource="#Schema"/>
+  <rdfs:range rdf:resource="#Text"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#occursIn">
+  <rdfs:domain rdf:resource="#Event"/>
+  <rdfs:range rdf:resource="#Field"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isLogged">
+  <rdfs:domain rdf:resource="#Field"/>
+  <rdfs:range rdf:resource="#Log"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isStemmatic">
+  <rdfs:domain rdf:resource="#Log"/>
+  <rdfs:range rdf:resource="#Record"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isTractual">
+  <rdfs:domain rdf:resource="#Record"/>
+  <rdfs:range rdf:resource="#Track"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#underpins">
+  <rdfs:domain rdf:resource="#Text"/>
+  <rdfs:range rdf:resource="#Stemma"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasLineage">
+  <rdfs:domain rdf:resource="#Track"/>
+  <rdfs:range rdf:resource="#Stemma"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#traces">
+  <rdfs:domain rdf:resource="#Stemma"/>
+  <rdfs:range rdf:resource="#Effect"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAddressedBy">
+  <rdfs:domain rdf:resource="#Effect"/>
+  <rdfs:range rdf:resource="#Scheme"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasStructure">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Scheme"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#demonstrates">
+  <rdfs:domain rdf:resource="#Event"/>
+  <rdfs:range rdf:resource="#Effect"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isCausal">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Effect"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#describedBy">
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Term"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isDocumentedIn">
+  <rdfs:domain rdf:resource="#Term"/>
+  <rdfs:range rdf:resource="#Notice"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isFramedBy">
+  <rdfs:domain rdf:resource="#Notice"/>
+  <rdfs:range rdf:resource="#Frame"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isContextual">
+  <rdfs:domain rdf:resource="#Frame"/>
+  <rdfs:range rdf:resource="#Context"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contextualizes">
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Object"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasKnowledge">
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Scheme"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAchieved">
+  <rdfs:domain rdf:resource="#Event"/>
+  <rdfs:range rdf:resource="#Goal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#defines">
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Goal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#processes">
+  <rdfs:domain rdf:resource="#Action"/>
+  <rdfs:range rdf:resource="#Value"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#constitutes">
+  <rdfs:domain rdf:resource="#Value"/>
+  <rdfs:range rdf:resource="#Payload"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isTransmittedBy">
+  <rdfs:domain rdf:resource="#Payload"/>
+  <rdfs:range rdf:resource="#Packet"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isBasisFor">
+  <rdfs:domain rdf:resource="#Packet"/>
+  <rdfs:range rdf:resource="#Fact"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#triggers">
+  <rdfs:domain rdf:resource="#Action"/>
+  <rdfs:range rdf:resource="#Event"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#instanceOf">
+  <rdfs:domain rdf:resource="#Action"/>
+  <rdfs:range rdf:resource="#Method"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isExpressedAs">
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Method"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isJustifiedBy">
+  <rdfs:domain rdf:resource="#Method"/>
+  <rdfs:range rdf:resource="#Reason"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasIntelligence">
+  <rdfs:domain rdf:resource="#Action"/>
+  <rdfs:range rdf:resource="#Reason"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCausality">
+  <rdfs:domain rdf:resource="#Event"/>
+  <rdfs:range rdf:resource="#Reason"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#formsBasisOf">
+  <rdfs:domain rdf:resource="#Context"/>
+  <rdfs:range rdf:resource="#Package"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasValidity">
+  <rdfs:domain rdf:resource="#Fact"/>
+  <rdfs:range rdf:resource="#Package"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#utlizes">
+  <rdfs:domain rdf:resource="#Package"/>
+  <rdfs:range rdf:resource="#Method"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#initiates">
+  <rdfs:domain rdf:resource="#Action"/>
+  <rdfs:range rdf:resource="#Cause"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAffectedBy">
+  <rdfs:domain rdf:resource="#Object"/>
+  <rdfs:range rdf:resource="#Cause"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#capturedAs">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#Object"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#exchangedThrough">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#Action"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#enteredAs">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#Event"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#accessedBy">
+  <rdfs:domain rdf:resource="#Data"/>
+  <rdfs:range rdf:resource="#Concept"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#CDOThing">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDOThing is the top CDO class.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Behaviour">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Passive">
+  <rdfs:subClassOf rdf:resource="#Behaviour"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Active">
+  <rdfs:subClassOf rdf:resource="#Behaviour"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Perspective">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Objective">
+  <rdfs:subClassOf rdf:resource="#Perspective"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Subjective">
+  <rdfs:subClassOf rdf:resource="#Perspective"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Object">
+  <rdfs:subClassOf rdf:resource="#Passive"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Attribute">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Form">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Schema">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Text">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Event">
+  <rdfs:subClassOf rdf:resource="#Objective"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Field">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Log">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Record">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Track">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Stemma">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Effect">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Scheme">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Concept">
+  <rdfs:subClassOf rdf:resource="#Subjective"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Term">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Notice">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Frame">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Context">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Goal">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Action">
+  <rdfs:subClassOf rdf:resource="#Active"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Value">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Payload">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Packet">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fact">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Value is factual once a Packet's ACK (acknowledgement) message is received.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#Method">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Reason">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Package">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cause">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Data">
+  <rdfs:subClassOf rdf:resource="#CDOThing"/>
+</owl:Class>
+
+
+</rdf:RDF>
